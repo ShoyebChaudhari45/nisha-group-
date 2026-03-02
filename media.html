@@ -19,10 +19,14 @@
             <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
             <nav class="nav-menu" id="navMenu">
                 <a href="index.html">Home</a><a href="about.html">About Us</a>
-                <div class="nav-dropdown"><a href="projects.html">Projects ▾</a>
-                    <div class="dropdown-menu"><a href="projects.html#ongoing">Ongoing</a><a
-                            href="projects.html#completed">Completed</a></div>
-                </div>
+                        <div class="nav-dropdown">
+          <a href="projects.html">Projects &#9662;</a>
+          <div class="dropdown-menu">
+            <a href="projects.html#ongoing">Ongoing Projects</a>
+            <a href="projects.html#completed">Completed Projects</a>
+            <a href="projects.html#upcoming">Upcoming Projects</a>
+          </div>
+        </div>
                 <a href="events.html">Events</a><a href="blogs.html">Blogs</a><a href="media.html"
                     class="active">Media</a>
                 <a href="careers.html">Careers</a><a href="contact.html">Contact Us</a>
@@ -117,6 +121,18 @@
         </svg></a>
     <button class="back-to-top">↑</button>
     <script src="js/main.js"></script>
+    <div class="modal-overlay" id="enquireModal">
+        <div class="modal"><button class="modal-close">&times;</button>
+            <h2>Schedule A Visit</h2>
+            <form style="margin-top:16px;">
+                <div class="form-group"><input type="text" required placeholder="Full Name"></div>
+                <div class="form-row">
+                    <div class="form-group"><input type="email" required placeholder="Email"></div>
+                    <div class="form-group"><input type="tel" required placeholder="Phone"></div>
+                </div><button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Submit &#8594;</button>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -81,12 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (slides.length > 0) {
-    slideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+    slideInterval = setInterval(() => goToSlide(currentSlide + 1), 4000);
     dots.forEach((dot, i) => {
       dot.addEventListener('click', () => {
         clearInterval(slideInterval);
         goToSlide(i);
-        slideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
+        slideInterval = setInterval(() => goToSlide(currentSlide + 1), 4000);
       });
     });
   }

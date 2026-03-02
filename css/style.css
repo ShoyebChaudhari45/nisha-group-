@@ -252,6 +252,21 @@ ul {
   transform: translateY(0);
 }
 
+/* Dropdown Bridge to prevent flickering */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  display: none;
+}
+
+.nav-dropdown:hover::after {
+  display: block;
+}
+
 .dropdown-menu a {
   font-size: 0.88rem;
   color: var(--gray-500);
@@ -387,7 +402,7 @@ ul {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
 }
 
 .hero-slide.active {
@@ -398,7 +413,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: heroZoom 12s ease-in-out infinite alternate;
+  animation: heroZoom 8s ease-in-out infinite alternate;
 }
 
 @keyframes heroZoom {
@@ -1674,8 +1689,15 @@ ul {
 }
 
 .footer-about .footer-logo {
-  height: 55px;
-  margin-bottom: 18px;
+  height: 65px;
+  margin-bottom: 22px;
+  filter: brightness(0) invert(1) opacity(0.9);
+  transition: var(--transition);
+}
+
+.footer-about .footer-logo:hover {
+  filter: brightness(0) invert(1) opacity(1);
+  transform: scale(1.02);
 }
 
 .footer-about p {
